@@ -1,0 +1,232 @@
+body {
+  margin: 8px 0 0 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.header {
+  max-width: 1440px;
+  width: 97%;
+  margin: auto;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: black;
+  cursor: pointer;
+}
+
+.localisation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.localisation i {
+  margin-right: 10px;
+}
+
+/* EXPLORATION SECTION */
+.exploration {
+  max-width: 1440px;
+  width: 97%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.exploration__title {
+  margin-bottom: 15px;
+  max-width: 370px;
+  text-align: center;
+}
+.exploration__sub-title {
+  font-size: 20px;
+}
+.exploration__button {
+  align-items: center;
+  background-color: #3EB2FD;
+  border-radius: 100px;
+  border-width: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-size: 20px;
+  height: auto;
+  line-height: 1.5;
+  padding: 6px 20px;
+  text-align: center;
+}
+
+/* STEPS SECTION  */
+.steps {
+  max-width: 1440px;
+  width: 97%;
+  margin: auto;
+}
+.steps__three-bars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.steps__individual-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 33%;
+  box-shadow: 10px 10px 8px #888888;
+  border-radius: 50px;
+  height: 40px;
+  cursor: pointer;
+}
+.steps__number {
+  background-color: purple;
+  color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+  margin-bottom: -2px;
+  margin-left: -5px;
+}
+.steps__icon {
+  margin-left: 30px;
+  margin-bottom: -3px;
+}
+.steps__text {
+  margin-left: 10px;
+}
+
+/* RESTAURANTS SECTION */
+.restaurants {
+  max-width: 1440px;
+  width: 97%;
+  margin: auto;
+}
+.restaurants__four-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 800px;
+  margin: auto;
+  gap: 15px;
+}
+.restaurants__individual-box {
+  box-shadow: 10px 10px 8px #888888;
+  border-radius: 20px;
+  height: 270px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.restaurants__image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.restaurants__new {
+  position: absolute;
+  box-shadow: 10px 10px 8px #888888;
+  background-color: green;
+  color: #149BF3;
+  margin-top: 30px;
+  margin-right: 30px;
+  padding: 10px;
+  align-self: flex-end;
+}
+.restaurants__box-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  padding: 20px;
+}
+
+/* FOOTER */
+.footer {
+  background: grey;
+  margin-top: 20px;
+}
+.footer__logo {
+  font-size: 60px;
+  max-width: 1440px;
+  width: 97%;
+  margin: auto;
+}
+.footer__logo a {
+  color: white;
+}
+.footer__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style-type: none;
+  padding-left: 0;
+  cursor: pointer;
+  max-width: 1440px;
+  width: 97%;
+  margin: auto;
+}
+.footer__item li {
+  margin: 20px 120px 20px 0;
+  color: white;
+  font-size: 20px;
+}
+.footer__item li a {
+  color: white;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .restaurants__four-boxes {
+    width: 50%;
+  }
+  .restaurants__individual-box {
+    height: 270px;
+    width: 300px;
+  }
+
+  .footer {
+    padding-left: 30px;
+  }
+  .footer__logo {
+    font-size: 40px;
+  }
+  .footer__item {
+    flex-direction: column;
+    list-style-type: none;
+  }
+  .footer__item li {
+    font-size: 15px;
+    margin-top: 6px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .steps__text {
+    font-size: 12px;
+    padding-right: 5px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

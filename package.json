@@ -1,0 +1,11 @@
+{
+  "name": "p3v1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./styles/SCSS/main.scss:./styles/CSS/main.css ./styles/SCSS/pages.scss:./styles/CSS/pages.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
