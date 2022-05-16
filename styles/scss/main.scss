@@ -1,0 +1,194 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./layouts/footer";
+@import "./base/base-rules";
+@import "./base/typography";
+@import "./base/breakpoints";
+@import "./components/button";
+@import "./components/spinner";
+
+h1{
+    font-size: 30px
+}
+
+.header{
+    @include global-positioning();
+
+    &__logo{
+    @include flex-row();
+    @include totally-centered-flex();
+    font-size: 50px;
+    color: black;
+    cursor: pointer;
+    }
+}
+
+.localisation{
+    @include flex-row();
+    @include totally-centered-flex();
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.localisation i{
+    margin-right: 10px;
+}
+
+/* EXPLORATION SECTION */
+
+.exploration{
+    @include global-positioning();
+    @include flex-row();
+    @include totally-centered-flex();
+    flex-direction: column;
+
+    &__title{
+        margin-bottom: 15px;
+        max-width: 370px;
+        text-align: center;
+    }
+    &__sub-title{
+        font-size: 20px;
+    }
+    &__button{
+        @include totally-centered-flex();
+        @include button();
+    }
+}
+
+
+/* STEPS SECTION  */
+
+.steps{
+    @include global-positioning();
+
+    &__three-bars{
+        @include flex-row();
+        @include totally-centered-flex();
+        gap: 20px;
+    }
+
+    &__individual-bar{
+        @include flex-row();
+        justify-content: flex-start;
+        align-items: center;
+        width: 33%;
+        box-shadow: $standard-box-shadow;
+        border-radius: 50px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    &__number{
+        background-color: $color-primary;
+        color: white;
+        height: 20px;
+        width: 20px;
+        border-radius: 100%;
+        font-size: 16px;
+        position: absolute;
+        text-align: center;
+        margin-bottom: -2px; // à vérifier (illusion optique)
+        margin-left:-5px;
+    }
+
+    &__icon {
+        margin-left: 30px;
+        margin-bottom: -3px; // à vérifier (illusion optique)
+    }
+
+    &__text {
+        margin-left: 10px;
+    }
+
+    @include x-small-screen{
+   
+        &__text {
+            font-size: 12px;
+            padding-right: 5px;
+        }
+    }
+}
+
+/* RESTAURANTS SECTION */
+
+.restaurants{
+    @include global-positioning();
+    
+    &__four-boxes{
+        @include flex-row();
+        @include totally-centered-flex();
+        flex-wrap: wrap;
+        width: 800px;
+        margin: auto;
+        gap : 15px;
+    }
+
+    &__four-boxes a{
+        color: black;
+    }
+
+    &__individual-box{
+        box-shadow: $standard-box-shadow;
+        border-radius: 20px;
+        height: 270px;
+        width: 300px;
+        @include flex-column();
+        cursor: pointer;
+    }
+
+    &__image{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+
+    &__new{
+        position: absolute;
+        box-shadow: $standard-box-shadow;
+        background-color: $color-tertiary;
+        color: #149BF3;
+        margin-top: 30px;
+        margin-right: 30px;
+        padding: 10px;
+        align-self: flex-end;
+    }
+
+    &__box-content{
+        @include flex-row();
+        justify-content: space-between;
+        align-items: center;
+        font-size: 15px;
+        padding: 20px
+    }
+
+    @include small-screen{
+
+        &__four-boxes{
+            width: 50%;
+        }  
+       
+        &__individual-box{
+            height: 270px;
+            width: 300px;
+        }
+    }
+}
+
+
+/* FOOTER */
+
+@include footer();
+
+
+
+
+
+
+
+
+
+   
+   
+   

@@ -1,0 +1,153 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./layouts/footer";
+@import "./base/base-rules";
+@import "./base/typography";
+@import "./base/breakpoints";
+@import "./components/button";
+@import "./components/spinner";
+
+
+.header{
+    @include global-positioning();
+    @include flex-row();
+    @include totally-centered-flex();
+    margin-bottom: 30px;
+
+    &__prev-icon{
+        position: absolute;
+        left: 15px;
+    }
+
+    &__prev-icon a{
+    color: black;
+    }
+
+    &__logo{
+        font-size: 60px; 
+    }
+    &__logo a{
+    color: black;
+    }
+}
+
+/* IMAGE */
+
+.image {
+  position: relative;
+  z-index: 0;
+}
+
+.image img{
+    width:100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+
+/* MENU */
+
+.menu{
+    @include global-positioning();
+    box-shadow: $standard-box-shadow;
+    border-radius: 50px;
+    margin-top: -50px;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+
+    &__title{
+    @include flex-row();
+    justify-content: space-between;   
+    align-items: center;
+    margin : 0 40px 0 30px;
+    }
+
+    &__global-container{
+        @include flex-column();
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 300px;
+    }
+
+    &__container{
+        width: 30%;
+    }
+
+    &__container-title{
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+    
+    &__individual-box{
+    @include flex-row();
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: $standard-box-shadow;
+    border-radius: 50px;
+    padding: 15px;
+    margin-top: 10px;
+    cursor :pointer;
+    }
+
+  &__box-text{
+      font-size: 12px;
+      margin-left: 15px;
+  }
+
+  &__order{
+      text-align: center;
+  }
+
+    &__order-button{
+    margin: 60px 0 30px 0;
+    @include button();
+    }
+
+    @include medium-screen{
+        &__individual-box{
+        height : 60px;
+        }
+    }    
+
+    @include small-screen{
+        padding: 0;
+        margin: 0;
+        margin-top: -60px;
+        width: 100%;
+    
+        &__global-container{
+            height: auto;
+            align-items: flex-start;
+            margin: 0 15px 0 15px;
+        }
+    
+        &__container{
+            width: 95%;
+        }
+    
+        &__individual-box{
+        padding: 15px;
+        width: 100%;
+        height: 30px;
+        margin-top: 20px;
+        }
+    
+        &__order-button{
+            margin: 30px 0 30px 0;
+            }
+    }
+}
+
+/* FOOTER */
+
+@include footer();
+
+
+
+
+
+
+
+    

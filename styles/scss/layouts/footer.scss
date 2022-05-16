@@ -1,0 +1,51 @@
+@mixin footer{
+
+    .footer{
+        background: grey;
+        margin-top: 20px;
+        
+        &__logo{
+            font-size: 60px;
+            @include global-positioning();
+        }
+        &__logo a{
+            color: white;
+        }
+        &__item{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start; 
+            align-items: flex-start;
+            list-style-type:none;
+            padding-left: 0;
+            cursor: pointer;
+            @include global-positioning();
+        }
+        &__item li{
+            margin: 20px 120px 20px 0;
+            color: white;
+            font-size: 20px;
+            }
+        &__item li a{
+            color: white;
+            }
+
+        @media screen and (max-width: 768px){
+            padding-left: 30px;
+                &__logo{
+                    font-size: 40px;
+                }
+                &__item{
+                    flex-direction: column;
+                    list-style-type:none;
+                }
+                &__item li{
+                font-size: 15px;
+                margin-top: 6px;
+                }
+            }
+        }
+    }
+
+
+
