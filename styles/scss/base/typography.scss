@@ -1,13 +1,13 @@
 body{
-font-family: 'Roboto', sans-serif;
-}
-
-.header{
-    font-family: 'Shrikhand', cursive;
-}
-
-.footer{
-    &__logo a{
+    font-family: 'Roboto', sans-serif;
+    }
+    
+    .header{
         font-family: 'Shrikhand', cursive;
     }
-}
+    
+    .footer{
+        &__logo a{
+            font-family: 'Shrikhand', cursive;
+        }
+    }

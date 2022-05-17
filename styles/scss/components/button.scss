@@ -1,5 +1,5 @@
 @mixin button{
-    background-color: #3EB2FD;
+    background: $gradient;
     border-radius: 100px;
     border-width: 0;
     box-shadow: none;
@@ -10,4 +10,9 @@
     height: auto;
     line-height: 1.5;
     padding: 6px 20px;
+    filter: brightness(1);
+    &:hover{
+        filter: brightness(1.40);
+        box-shadow: 2px 2px 1px grey;
+    }
     }    

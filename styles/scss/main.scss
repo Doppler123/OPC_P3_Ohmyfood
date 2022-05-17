@@ -5,6 +5,7 @@
 @import "./base/typography";
 @import "./base/breakpoints";
 @import "./components/button";
+@import "./components/heart";
 @import "./components/spinner";
 
 h1{
@@ -92,22 +93,17 @@ h1{
         margin-left:-5px;
     }
 
-    &__icon {
+    &__icon{
         margin-left: 30px;
         margin-bottom: -3px; // à vérifier (illusion optique)
     }
 
-    &__text {
+    &__text{
         margin-left: 10px;
+        font-size: 12px;
+        padding-right: 5px;
     }
 
-    @include x-small-screen{
-   
-        &__text {
-            font-size: 12px;
-            padding-right: 5px;
-        }
-    }
 }
 
 /* RESTAURANTS SECTION */
@@ -119,7 +115,7 @@ h1{
         @include flex-row();
         @include totally-centered-flex();
         flex-wrap: wrap;
-        width: 800px;
+        width: 50%;
         margin: auto;
         gap : 15px;
     }
@@ -163,16 +159,12 @@ h1{
         padding: 20px
     }
 
-    @include small-screen{
 
+    @include large-screen{
         &__four-boxes{
-            width: 50%;
+            width: 800px;
         }  
        
-        &__individual-box{
-            height: 270px;
-            width: 300px;
-        }
     }
 }
 

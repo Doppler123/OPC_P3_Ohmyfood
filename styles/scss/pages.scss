@@ -5,6 +5,7 @@
 @import "./base/typography";
 @import "./base/breakpoints";
 @import "./components/button";
+@import "./components/heart";
 @import "./components/spinner";
 
 
@@ -51,28 +52,28 @@
     @include global-positioning();
     box-shadow: $standard-box-shadow;
     border-radius: 50px;
-    margin-top: -50px;
     position: relative;
     z-index: 1;
     background-color: white;
+    padding: 0;
+    margin: 0;
+    margin-top: -60px;
+    width: 100%;
+    display: grid;
 
     &__title{
-    @include flex-row();
-    justify-content: space-between;   
+    @include flex-row;
+    justify-content: space-between;
     align-items: center;
-    margin : 0 40px 0 30px;
+    margin-inline: 20px;
     }
 
     &__global-container{
-        @include flex-column();
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
-        height: 300px;
+   margin-inline: 15px;
     }
 
     &__container{
-        width: 30%;
+
     }
 
     &__container-title{
@@ -86,59 +87,122 @@
     align-items: center;
     box-shadow: $standard-box-shadow;
     border-radius: 50px;
-    padding: 15px;
-    margin-top: 10px;
     cursor :pointer;
+    width: 100%;
+    height : 60px;
+    margin-top: 20px;
+    &:hover .menu__box-circle-check{
+        animation: slide-left 0.8s ease ;
+        transform-origin: right;
+        @include flex-row();
+        @include totally-centered-flex();
+    } 
+    &:hover .menu__box-price{
+        margin-left: 70px;
+        transition: 1s ease-in-out ;
+    }
     }
 
   &__box-text{
       font-size: 12px;
-      margin-left: 15px;
+      margin-left: 25px;
+      width: 100%;
   }
 
-  &__order{
-      text-align: center;
+  &__box-price{
+    margin-right: 20px;
+}
+
+  &__box-circle-check{
+      background: $color-tertiary;
+      height: 100%;
+      @include flex-row;
+      @include totally-centered-flex;
+      border-radius: 0 50px 50px 0;
+      right: 0px;
+      padding: 0;
+      width: 100px;
+      display: none;
   }
 
-    &__order-button{
-    margin: 60px 0 30px 0;
-    @include button();
+  &__box-circle-check i{
+    color: white;
+    font-size: 50px;
+    transform: rotate(180deg);
+    animation: rotate 0.5s both;
+}
+
+&__order{
+    @include flex-row;
+    justify-content: center;
+}
+
+&__order-button{   
+margin: 30px 0 30px 0;
+@include button();
+}
+
+
+ 
+@include large-screen{
+    margin: auto;
+    margin-top: -50px;
+
+
+        &__global-container{
+            display: grid;
+            grid-template-areas: "entries dishes desserts";
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap:10px;
+        }
+
+        &__container{
+         
+        }
+
+        &__order-button{
+
+        }
     }
 
-    @include medium-screen{
+    @include x-large-screen{
         &__individual-box{
-        height : 60px;
+        height: 50px;
         }
-    }    
+    }   
+}
 
-    @include small-screen{
-        padding: 0;
-        margin: 0;
-        margin-top: -60px;
-        width: 100%;
-    
-        &__global-container{
-            height: auto;
-            align-items: flex-start;
-            margin: 0 15px 0 15px;
-        }
-    
-        &__container{
-            width: 95%;
-        }
-    
-        &__individual-box{
-        padding: 15px;
-        width: 100%;
-        height: 30px;
-        margin-top: 20px;
-        }
-    
-        &__order-button{
-            margin: 30px 0 30px 0;
-            }
+#entries{
+    grid-area: entries;
+}
+
+#dishes{
+    grid-area: dishes;
+}
+
+#desserts{
+    grid-area: desserts;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+}
+100% {
+        transform: rotate(360deg);
     }
 }
+
+  @keyframes slide-left {
+    0% {
+              transform: scaleX(0);
+    }
+    100% {
+              transform: scaleX(-50px);
+    }
+  }
+  
 
 /* FOOTER */
 
