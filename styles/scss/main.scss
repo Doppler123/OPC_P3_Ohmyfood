@@ -8,6 +8,9 @@
 @import "./components/heart";
 @import "./components/spinner";
 
+
+@include spinner();
+
 h1{
     font-size: 30px
 }
@@ -110,6 +113,7 @@ h1{
 
 .restaurants{
     @include global-positioning();
+    @include heart();
     
     &__four-boxes{
         @include flex-row();

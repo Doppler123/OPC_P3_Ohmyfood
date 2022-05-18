@@ -1,6 +1,35 @@
 @mixin heart{
 
-    &:hover{
-
+    .heart{
+        position: relative;
+        cursor: pointer;
+        &__solid{
+            color: transparent;
+            background-image: $gradient;
+            background-clip: text;
+            -webkit-background-clip: text;
+            position: absolute;
+            opacity:0;
+            &:hover{
+                animation: fulfill 1s forwards;
+            }
+            }
+        
+            &__regular{
+            position: absolute;
+        }
     }
+    
+    @keyframes fulfill {
+        0% {
+                    opacity: 0;
+        }
+        60%{
+                    opacity: 0.9;
+        }    
+        100% {
+                    opacity: 1;
+        }
+        }
+        
     }    

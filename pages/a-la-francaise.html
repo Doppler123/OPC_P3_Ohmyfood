@@ -13,6 +13,11 @@
 
 <body>
 
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+
     <header class="header">
         <div class="header__prev-icon"><a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
         <div class="header__logo"><a href="../index.html">ohmyfood</a></div>
@@ -31,14 +36,20 @@
 
         <div class="menu__title">
             <h1>À la française</h1>
-            <i class="fa-regular fa-heart"></i>
+            <div class="heart">
+                <div class="heart__regular">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="heart__solid">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
         </div>
-
         <div class="menu__global-container">
 
             <div class="menu__container" id="entries">
 
-                <div class="menu__container-title">ENTRÉES</div>
+                <div class="menu__container-title"><h2>ENTRÉES</h2></div>
 
                 <div class="menu__individual-box">
                     <div class="menu__box-text">
@@ -88,7 +99,7 @@
 
             <div class="menu__container" id="dishes">
 
-                <div class="menu__container-title">PLATS</div>
+                <div class="menu__container-title"><h2>PLATS</h2></div>
 
                 <div class="menu__individual-box">
                     <div class="menu__box-text">
@@ -135,10 +146,10 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="menu__container" id="desserts">
 
-                <div class="menu__container-title">DESSERTS</div>
+                <div class="menu__container-title"><h2>DESSERTS</h2></div>
 
                 <div class="menu__individual-box">
                     <div class="menu__box-text">
