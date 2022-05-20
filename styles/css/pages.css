@@ -11,7 +11,7 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.header {
+h1 {
   font-family: "Shrikhand", cursive;
 }
 
@@ -98,15 +98,19 @@ Extra extra large	xxl	≥1400px */
     visibility: hidden;
   }
 }
+body {
+  margin: 0;
+}
+
 .header {
-  max-width: 1440px;
-  width: 97%;
-  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  background-color: #F2F2F2;
+  margin: 0;
+  width: 100%;
 }
 .header__prev-icon {
   position: absolute;
@@ -135,7 +139,9 @@ Extra extra large	xxl	≥1400px */
 }
 
 .heart {
-  position: relative;
+  font-size: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
   cursor: pointer;
 }
 .heart__solid {
@@ -169,11 +175,11 @@ Extra extra large	xxl	≥1400px */
   max-width: 1440px;
   width: 97%;
   margin: auto;
-  box-shadow: 3px 1px 3px 1px #888888;
-  border-radius: 50px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   position: relative;
   z-index: 1;
-  background-color: white;
+  background-color: #F2F2F2;
   padding: 0;
   margin: 0;
   margin-top: -60px;
@@ -192,7 +198,7 @@ Extra extra large	xxl	≥1400px */
 }
 .menu__container-title h2 {
   margin-left: 25px;
-  margin-top: 10px;
+  padding-top: 20px;
   font-size: 15px;
   display: flex;
   flex-direction: column;
@@ -211,12 +217,13 @@ Extra extra large	xxl	≥1400px */
   justify-content: space-between;
   align-items: center;
   box-shadow: 3px 1px 3px 1px #888888;
-  border-radius: 50px;
+  border-radius: 17px;
   cursor: pointer;
   width: 100%;
   height: 60px;
   margin-top: 20px;
   animation: opacity 10s forwards;
+  background-color: white;
 }
 .menu__individual-box:hover .menu__box-circle-check {
   animation: slide-left 0.8s ease;
@@ -230,6 +237,9 @@ Extra extra large	xxl	≥1400px */
   margin-left: 70px;
   transition: 1s ease-in-out;
 }
+.menu__box-title {
+  font-weight: bold;
+}
 .menu__box-text {
   font-size: 12px;
   margin-left: 25px;
@@ -237,6 +247,7 @@ Extra extra large	xxl	≥1400px */
 }
 .menu__box-price {
   margin-right: 20px;
+  font-weight: bold;
 }
 .menu__box-circle-check {
   background: #99E2D0;
@@ -245,7 +256,7 @@ Extra extra large	xxl	≥1400px */
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-radius: 0 50px 50px 0;
+  border-radius: 0 17px 17px 0;
   right: 0px;
   padding: 0;
   width: 100px;
@@ -341,17 +352,17 @@ Extra extra large	xxl	≥1400px */
 }
 /* FOOTER */
 .footer {
-  background: black;
-  margin-top: 20px;
+  background: #2e2a2a;
   padding-left: 30px;
 }
 .footer__logo {
   font-size: 15px;
   color: white;
-  padding-top: 10px;
+  padding-top: 15px;
   max-width: 1440px;
   width: 97%;
   margin: auto;
+  margin-bottom: 12px;
 }
 .footer__logo a {
   color: white;
@@ -368,10 +379,18 @@ Extra extra large	xxl	≥1400px */
   width: 97%;
   margin: auto;
 }
+.footer__item i {
+  font-size: 12px;
+  width: 8px;
+  padding-right: 12px;
+}
 .footer__item li {
   margin: 6px 120px 20px 0;
   color: white;
   font-size: 15px;
+  box-sizing: border-box;
+  padding: 0;
+  margin-bottom: 5px;
 }
 .footer__item li a {
   color: white;
@@ -381,7 +400,7 @@ Extra extra large	xxl	≥1400px */
     padding-left: auto;
   }
   .footer__logo {
-    font-size: 60px;
+    font-size: 25px;
   }
   .footer__item {
     flex-direction: row;

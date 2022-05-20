@@ -10,11 +10,17 @@
 
 @include spinner();
 
+body{
+    margin : 0;
+}
+
 .header{
-    @include global-positioning();
     @include flex-row();
     @include totally-centered-flex();
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    background-color: #F2F2F2;
+    margin: 0;
+    width: 100%;
 
     &__prev-icon{
         position: absolute;
@@ -54,11 +60,11 @@
 
 .menu{
     @include global-positioning();
-    box-shadow: $standard-box-shadow;
-    border-radius: 50px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
     position: relative;
     z-index: 1;
-    background-color: white;
+    background-color: #F2F2F2;
     padding: 0;
     margin: 0;
     margin-top: -60px;
@@ -78,7 +84,7 @@
 
     &__container-title h2{
         margin-left: 25px;
-        margin-top: 10px;
+        padding-top: 20px;
         font-size: 15px;
         @include flex-column;
         &::after {
@@ -96,12 +102,13 @@
     justify-content: space-between;
     align-items: center;
     box-shadow: $standard-box-shadow;
-    border-radius: 50px;
+    border-radius: 17px;
     cursor :pointer;
     width: 100%;
     height : 60px;
     margin-top: 20px;
     animation: opacity 10s forwards;
+    background-color: white;
     &:hover .menu__box-circle-check{
         animation: slide-left 0.8s ease ;
         transform-origin: right;
@@ -114,6 +121,10 @@
     }
     }
 
+  &__box-title{
+      font-weight: bold;
+  }
+  
   &__box-text{
       font-size: 12px;
       margin-left: 25px;
@@ -122,6 +133,7 @@
 
   &__box-price{
     margin-right: 20px;
+    font-weight: bold;
 }
 
   &__box-circle-check{
@@ -129,7 +141,7 @@
       height: 100%;
       @include flex-row;
       @include totally-centered-flex;
-      border-radius: 0 50px 50px 0;
+      border-radius: 0 17px 17px 0;
       right: 0px;
       padding: 0;
       width: 100px;
@@ -186,7 +198,7 @@ margin: 30px 0 30px 0;
 }
 
 @keyframes rotate {
-    0% {
+0% {
         transform: rotate(0);
 }
 100% {
