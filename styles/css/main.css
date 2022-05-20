@@ -305,12 +305,14 @@ h1 {
 
 /* FOOTER */
 .footer {
-  background: grey;
+  background: black;
   margin-top: 20px;
   padding-left: 30px;
 }
 .footer__logo {
-  font-size: 40px;
+  font-size: 15px;
+  color: white;
+  padding-top: 10px;
   max-width: 1440px;
   width: 97%;
   margin: auto;

@@ -1,12 +1,14 @@
 @mixin footer{
 
     .footer{
-        background: grey;
+        background: black;
         margin-top: 20px;
         padding-left: 30px;
         
         &__logo{
-            font-size: 40px;
+            font-size: 15px;
+            color: white;
+            padding-top: 10px;
             @include global-positioning();
         }
         &__logo a{
