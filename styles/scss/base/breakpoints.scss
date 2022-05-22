@@ -23,8 +23,9 @@ Extra extra large	xxl	≥1400px */
   } */
 
 
-
-  
+  @mixin x-small-screen{
+    @media (min-width: 576px) { @content; }
+  }
   @mixin medium-screen{
     @media (min-width: 768px) { @content; }
   }

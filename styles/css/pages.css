@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  margin: 8px 0 0 0;
+  margin: 0;
 }
 
 a {
@@ -174,7 +174,7 @@ body {
 .menu {
   max-width: 1440px;
   width: 97%;
-  margin: auto;
+  margin: 0;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   position: relative;
@@ -283,7 +283,7 @@ body {
   color: #FFFFFF;
   cursor: pointer;
   font-size: 20px;
-  height: auto;
+  height: 60px;
   line-height: 1.5;
   padding: 6px 20px;
   filter: brightness(1);
@@ -354,6 +354,7 @@ body {
 .footer {
   background: #2e2a2a;
   padding-left: 30px;
+  padding-bottom: 20px;
 }
 .footer__logo {
   font-size: 15px;
@@ -361,7 +362,7 @@ body {
   padding-top: 15px;
   max-width: 1440px;
   width: 97%;
-  margin: auto;
+  margin: 0;
   margin-bottom: 12px;
 }
 .footer__logo a {
@@ -377,7 +378,7 @@ body {
   cursor: pointer;
   max-width: 1440px;
   width: 97%;
-  margin: auto;
+  margin: 0;
 }
 .footer__item i {
   font-size: 12px;

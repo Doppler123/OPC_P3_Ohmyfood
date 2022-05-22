@@ -1,5 +1,5 @@
 body{
-    margin: 8px 0 0 0;
+    margin: 0;
 }
 
 a{
@@ -9,5 +9,5 @@ a{
 @mixin global-positioning {
     max-width: 1440px;
     width: 97%;
-    margin : auto;
+    margin : 0;
 }

@@ -16,7 +16,6 @@ h2{
 }
 
 .header{
-    @include global-positioning();
 
     &__logo{
     @include flex-row();
@@ -32,7 +31,7 @@ h2{
 .localisation{
     @include flex-row();
     @include totally-centered-flex();
-    font-size: 20px;
+    font-size: 15px;
     background-color: rgba(223, 215, 215, 0.911);
     padding: 15px 0 15px 0;
     box-shadow: 2px;
@@ -52,14 +51,16 @@ h2{
     padding-top: 10px;
     margin: 0;
     width: 100%;
+    box-sizing: border-box;
 
     &__title{
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         max-width: 370px;
         text-align: center;
     }
     &__sub-title{
-        font-size: 20px;
+        font-size: 18px;
+        text-align: center;
     }
     &__button{
         @include totally-centered-flex();
@@ -72,8 +73,12 @@ h2{
 /* STEPS SECTION  */
 
 .steps{
-    @include global-positioning();
-    padding-bottom: 25px;
+    box-sizing: border-box;
+    padding: 0 15px 25px 15px;
+
+    &__title{
+        overflow-wrap: break-word;
+    }
 
     &__three-bars{
         @include flex-column();
@@ -93,8 +98,8 @@ h2{
         align-items: center;
         width: 100%;
         box-shadow: $standard-box-shadow;
-        border-radius: 50px;
-        height: 40px;
+        border-radius: 20px;
+        height: 60px;
         background-color: #F2F2F2;
         cursor: pointer;
     }
@@ -111,16 +116,17 @@ h2{
         height: 20px;
         width: 20px;
         border-radius: 100%;
-        font-size: 16px;
+        font-size: 12px;
         position: absolute;
         text-align: center;
-        margin-bottom: -2px; // à vérifier (illusion optique)
-        margin-left:-5px;
+    }
+
+    &__number p{
+        margin-top: 3px;
     }
 
     &__icon{
         margin-left: 30px;
-        margin-bottom: -3px; // à vérifier (illusion optique)
     }
 
     &__icon i{
@@ -131,6 +137,7 @@ h2{
         margin-left: 10px;
         font-size: 12px;
         padding-right: 5px;
+        font-weight: bold;
     }
 
 }
@@ -140,44 +147,90 @@ h2{
 .restaurants{
     @include heart();
     background-color: #F2F2F2;
-    margin: 0;
+    margin-top: 30px;
     width: 100%;
-
-    &__title{
-        @include flex-row();
-        @include totally-centered-flex();
-        box-sizing: border-box;
-        margin-right: 120px;
-        padding-top: 30px;
-    }
-
-    @include large-screen{
-        &__title{
-            margin-right: 450px;
-        }  
-    }
+    padding-bottom: 40px;
 
     &__four-boxes{
-        @include flex-row();
-        @include totally-centered-flex();
-        flex-wrap: wrap;
-        width: 50%;
-        margin: auto;
-        gap : 15px;
+        @include flex-column();
+        justify-content: flex-start;
+        align-items: center;
         padding-bottom: 20px;
+        width: 100%;
     }
 
     &__four-boxes a{
         color: black;
+        width: 90%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__title{
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 30px;
+  
+    }
+
+    @include x-small-screen{
+        &__title{    
+    
+    }
+    }
+
+    @include medium-screen{
+        &__title{    
+    
+    }
+    }
+
+    &__row1{
+        width: 100%;
+        @include flex-column();
+        @include totally-centered-flex();
+    }
+
+    &__row2{
+        width: 100%;
+        @include flex-column();
+        @include totally-centered-flex();
+    }
+
+    @include medium-screen{
+        &__row1{
+            @include flex-row();
+        }  
+    }
+
+    @include medium-screen{
+        &__row2{
+            @include flex-row();
+        }  
     }
 
     &__individual-box{
         box-shadow: $standard-box-shadow;
         border-radius: 20px;
         height: 270px;
-        width: 300px;
+        width:100%;
+        box-sizing: border-box;
+        margin : 15px 0 0 0;
         @include flex-column();
         cursor: pointer;
+    }
+
+    @include x-small-screen{
+        &__four-boxes a{
+            width: 400px;
+        }  
+    }
+
+    @include medium-screen{
+        &__individual-box{
+            width: 360px;
+        }  
     }
 
     &__image{
@@ -190,12 +243,12 @@ h2{
     &__new{
         position: absolute;
         box-shadow: $standard-box-shadow;
-        border-radius: 5px;
+        border-radius: 3px;
         background-color: $color-tertiary;
         color: #285c10;
         margin-top: 30px;
         margin-right: 30px;
-        padding: 10px;
+        padding: 8px 15px 5px 15px;
         align-self: flex-end;
         font-weight: bold;
         font-size: 12px;
@@ -213,11 +266,6 @@ h2{
         font-weight: bold;
     }
 
-    @include large-screen{
-        &__four-boxes{
-            width: 800px;
-        }  
-    }
 }
 
 
