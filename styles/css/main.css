@@ -401,7 +401,6 @@ h2 {
   padding-top: 15px;
   max-width: 1440px;
   width: 97%;
-  margin: 0;
   margin-bottom: 12px;
 }
 .footer__logo a {
@@ -417,7 +416,6 @@ h2 {
   cursor: pointer;
   max-width: 1440px;
   width: 97%;
-  margin: 0;
 }
 .footer__item i {
   font-size: 12px;
