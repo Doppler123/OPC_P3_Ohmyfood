@@ -24,11 +24,13 @@ body{
     margin: 0;
     width: 100%;
 
-    &__logo{
+    &__logo img{
         color: black;
         cursor: pointer;
         padding-bottom: 5px;
         margin-top: 5px;
+        width: 160px;
+        height: auto;
         }
 
 
@@ -59,7 +61,7 @@ body{
 
 .image img{
     width:100%;
-    max-height: 500px;
+    max-height: 300px;
     object-fit: cover;
 }
 
@@ -83,13 +85,14 @@ body{
     &__title{
     @include flex-row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin-inline: 15px;
     padding-top: 10px;
     }
 
     &__title h1{
         font-size: 24px;
+        margin-bottom: 0;
         }
 
     &__global-container{
@@ -97,6 +100,7 @@ body{
     }
 
     &__container-title h2{
+        font-weight: lighter;
         margin-left: 5px;
         padding-top: 20px;
         font-size: 15px;
@@ -106,8 +110,8 @@ body{
             background: $color-tertiary;
             position: relative;
             margin-top: 5px;
-            height: 5px;
-            width: 75px;
+            height: 3px;
+            width: 40px;
         }        
     }
     
@@ -135,8 +139,15 @@ body{
     }
     }
 
-  &__box-title{
+  &__box-title p{
       font-weight: bold;
+      font-size: 15px;
+      margin: 0;
+      padding-bottom: 5px;
+  }
+
+  &__box-sub-title p{
+      margin: 0;
   }
   
   &__box-text{
@@ -146,8 +157,9 @@ body{
   }
 
   &__box-price{
-    margin-right: 20px;
+    margin: 20px 20px 0 0;
     font-weight: bold;
+    font-size: 13px;
 }
 
   &__box-circle-check{
@@ -164,7 +176,7 @@ body{
 
   &__box-circle-check i{
     color: white;
-    font-size: 50px;
+    font-size: 20px;
     transform: rotate(180deg);
     animation: rotate 0.7s forwards;
 }

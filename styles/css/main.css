@@ -154,7 +154,7 @@ h2 {
 .exploration__sub-title {
   font-size: 18px;
   text-align: center;
-  padding-bottom: 20px;
+  padding: 0 15px 20px 15px;
 }
 .exploration__button {
   justify-content: center;
@@ -167,9 +167,10 @@ h2 {
   color: #FFFFFF;
   cursor: pointer;
   font-size: 16px;
-  height: 50px;
+  font-weight: bold;
+  height: 45px;
   line-height: 1.5;
-  padding: 6px 35px 6px 35px;
+  padding: 6px 40px 6px 40px;
   filter: brightness(1);
 }
 .exploration__button:hover {
@@ -249,7 +250,7 @@ h2 {
   padding-bottom: 40px;
 }
 .restaurants .heart {
-  font-size: 30px;
+  font-size: 25px;
   padding-right: 30px;
   padding-bottom: 30px;
   cursor: pointer;
