@@ -166,10 +166,10 @@ h2 {
   box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   height: 45px;
-  line-height: 1.5;
+  line-height: 1.4;
   padding: 6px 40px 6px 40px;
   filter: brightness(1);
 }
@@ -181,7 +181,8 @@ h2 {
 /* STEPS SECTION  */
 .steps {
   box-sizing: border-box;
-  padding: 15px 15px 25px 15px;
+  padding: 15px 20px 25px 20px;
+  margin: 0 7.5% 0 7.5%;
 }
 .steps__title {
   overflow-wrap: break-word;
@@ -191,7 +192,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
 }
 @media (min-width: 768px) {
   .steps__three-bars {
@@ -204,7 +205,7 @@ h2 {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 90%;
   box-shadow: 3px 1px 3px 1px #888888;
   border-radius: 20px;
   height: 60px;
@@ -393,15 +394,17 @@ h2 {
 /* FOOTER */
 .footer {
   background: #2e2a2a;
-  padding-left: 30px;
   padding-bottom: 20px;
+  margin-bottom: 0;
+}
+.footer__global-container {
+  box-sizing: border-box;
+  padding-left: 40px;
 }
 .footer__logo {
   font-size: 15px;
   color: white;
   padding-top: 15px;
-  max-width: 1440px;
-  width: 97%;
   margin-bottom: 12px;
 }
 .footer__logo a {
@@ -415,8 +418,10 @@ h2 {
   list-style-type: none;
   padding-left: 0;
   cursor: pointer;
-  max-width: 1440px;
-  width: 97%;
+}
+.footer__item ul {
+  padding: 0;
+  margin: 0;
 }
 .footer__item i {
   font-size: 12px;
@@ -424,29 +429,36 @@ h2 {
   padding-right: 12px;
 }
 .footer__item li {
-  margin: 6px 120px 20px 0;
+  margin: 10px 120px 20px 0;
   color: white;
   font-size: 15px;
   box-sizing: border-box;
   padding: 0;
   margin-bottom: 5px;
+  list-style-type: none;
 }
 .footer__item li a {
   color: white;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .footer {
-    padding-left: auto;
+    padding-left: 0;
+    width: 100%;
+  }
+  .footer__global-container {
+    width: 100%;
+    margin: 0 7.5% 0 7.5%;
+    padding-left: 10px;
   }
   .footer__logo {
     font-size: 25px;
   }
-  .footer__item {
+  .footer__item ul {
+    display: flex;
     flex-direction: row;
   }
   .footer__item li {
-    font-size: 20px;
-    margin: 20px 120px 20px 0;
+    font-size: 17px;
   }
 }
 
