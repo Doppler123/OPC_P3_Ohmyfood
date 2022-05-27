@@ -102,7 +102,7 @@ h2{
         @include flex-row();
         justify-content: flex-start;
         align-items: center;
-        width: 90%;
+        width: 97%;
         box-shadow: $standard-box-shadow;
         border-radius: 20px;
         height: 60px;
@@ -112,7 +112,7 @@ h2{
 
     @include medium-screen{
         &__individual-bar{
-            width: 33%;;
+            width: 33%;
         }  
     }
 
@@ -155,19 +155,20 @@ h2{
     background-color: #F2F2F2;
     margin-top: 30px;
     width: 100%;
-    padding-bottom: 40px;
+    padding: 0 0 40px 0;
+    margin: 0;
+    box-sizing: border-box;
 
     &__four-boxes{
         @include flex-column();
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        padding-bottom: 20px;
-        width: 100%;
+        padding: 0 0 20px 0;
     }
 
     &__four-boxes a{
         color: black;
-        width: 90%;
+        width: 100%;
         box-sizing: border-box;
         padding: 0;
         margin: 0;
@@ -175,30 +176,30 @@ h2{
 
     &__title{
         box-sizing: border-box;
-        padding: 30px 0 0 15px;
+        padding: 30px 0 0 40px;
     }
 
     @include x-small-screen{
         &__title{    
         text-align: center;
-        margin-left:  -350px;
+        margin-left: -350px;
     }
     }
 
     @include medium-screen{
         &__title{    
-        margin-left:  -560px;
+        margin-left: -560px;
     }
     }
 
     &__row1{
-        width: 100%;
+        width: 90%;
         @include flex-column();
         @include totally-centered-flex();
     }
 
     &__row2{
-        width: 100%;
+        width: 90%;
         @include flex-column();
         @include totally-centered-flex();
     }
@@ -219,7 +220,7 @@ h2{
         box-shadow: $standard-box-shadow;
         border-radius: 20px;
         height: 270px;
-        width:100%;
+        width: 100%;
         box-sizing: border-box;
         margin : 15px 0 0 0;
         @include flex-column();

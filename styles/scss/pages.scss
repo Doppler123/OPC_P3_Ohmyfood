@@ -8,8 +8,6 @@
 @import "./components/heart";
 @import "./components/spinner";
 
-@include spinner();
-
 html{
     margin : 0;
     height: auto;
@@ -86,18 +84,20 @@ body{
 /* MENU */
 
 .menu{
+/*     max-width: 1230px; */
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     position: relative;
     z-index: 1;
     background-color: #F2F2F2;
     box-sizing: border-box;
-    padding: 0 20px 0 20px;
-    margin: 0;
+    padding: 0;
     margin-top: -60px;
-    width: 94%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    width: 100%;
     display: grid;
-
     @include large-screen{
             width: 85%;         
     }  
@@ -106,8 +106,10 @@ body{
     @include flex-row;
     justify-content: space-between;
     align-items: flex-end;
-    margin-inline: 15px;
     padding-top: 10px;
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
     }
 
     &__title h1{
@@ -116,12 +118,14 @@ body{
         }
 
     &__global-container{
-    margin-inline: 15px;
+    margin:0;
     } 
 
     &__container-title h2{
         font-weight: lighter;
-        margin-left: 5px;
+        width: 93%;
+        margin-left: auto;
+        margin-right: auto;
         padding-top: 20px;
         font-size: 15px;
         @include flex-column;
@@ -142,21 +146,49 @@ body{
     box-shadow: $standard-box-shadow;
     border-radius: 17px;
     cursor :pointer;
-    width: 100%;
+    width: 300px;
+    position:relative;
     height : 65px;
     margin-top: 20px;
-    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
     animation: opacity 10s forwards;
     background-color: white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    @include x-small-screen{
+        width: 550px;
+        }
+
+    @include medium-screen{
+    width: 250px;
+    }
+
+    &:hover {
+        width: 300px;
+
+        @include x-small-screen{
+            width: 550px;
+            }
+
+        @include medium-screen{
+            width: 250px;
+    } 
+}
+
     &:hover .menu__box-circle-check{
         animation: slide-left 0.8s ease ;
         transform-origin: right;
         @include flex-row();
         @include totally-centered-flex();
     } 
+
     &:hover .menu__box-price{
-        margin-left: 70px;
-        transition: 1s ease-in-out ;
+        margin-left: 0;
+        padding-right: 0;
+        transition: 1s ease;
     }
     }
 
@@ -164,26 +196,34 @@ body{
       font-weight: bold;
       font-size: 15px;
       margin: 0;
-      padding: 10px 0 5px 0;
-      box-sizing: border-box;
-  }
+      padding: 0 0 5px 0;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
 
   &__box-sub-title p{
+    font-size: 12px;
       margin: 0;
-      margin: 0 15px 10px 0;
-      box-sizing: border-box;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
   }
   
   &__box-text{
       font-size: 12px;
-      margin-left: 25px;
+      margin: 0;
       width: 100%;
+      padding: 0 5px 0 5px;
+      white-space: nowrap;
+      overflow: hidden;
   }
 
   &__box-price{
     margin: 20px 20px 0 0;
     font-weight: bold;
     font-size: 13px;
+
 }
 
   &__box-circle-check{
@@ -202,7 +242,7 @@ body{
     color: white;
     font-size: 20px;
     transform: rotate(180deg);
-    animation: rotate 0.7s forwards;
+    animation: rotate 0.7s both;
 }
 
 &__order{
