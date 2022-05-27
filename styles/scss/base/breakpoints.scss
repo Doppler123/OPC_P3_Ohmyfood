@@ -22,6 +22,13 @@ Extra extra large	xxl	≥1400px */
     @media (max-width: 1400px) { @content; }
   } */
 
+  @mixin xxx-small-screen{
+    @media (min-width: 320px) { @content; }
+  }
+
+  @mixin xx-small-screen{
+    @media (min-width: 440px) { @content; }
+  }
 
   @mixin x-small-screen{
     @media (min-width: 576px) { @content; }

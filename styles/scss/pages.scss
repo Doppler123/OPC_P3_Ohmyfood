@@ -76,6 +76,7 @@ body{
 @include x-large-screen{
     max-height: 540px;        
 }  
+
 }
 
 @include heart();
@@ -84,7 +85,7 @@ body{
 /* MENU */
 
 .menu{
-/*     max-width: 1230px; */
+    max-width: 1400px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     position: relative;
@@ -97,7 +98,6 @@ body{
     margin-right: auto;
     margin-bottom: 0;
     width: 100%;
-    display: grid;
     @include large-screen{
             width: 85%;         
     }  
@@ -106,7 +106,9 @@ body{
     @include flex-row;
     justify-content: space-between;
     align-items: flex-end;
+    box-sizing: border-box;
     padding-top: 10px;
+    padding-left: 5px;
     width: 93%;
     margin-left: auto;
     margin-right: auto;
@@ -126,6 +128,8 @@ body{
         width: 93%;
         margin-left: auto;
         margin-right: auto;
+        box-sizing: border-box;
+        padding-left: 10px;
         padding-top: 20px;
         font-size: 15px;
         @include flex-column;
@@ -146,7 +150,7 @@ body{
     box-shadow: $standard-box-shadow;
     border-radius: 17px;
     cursor :pointer;
-    width: 300px;
+    width: 250px;
     position:relative;
     height : 65px;
     margin-top: 20px;
@@ -158,16 +162,34 @@ body{
     white-space: nowrap;
     overflow: hidden;
 
+    @include xxx-small-screen{
+        width: 300px;
+        }
+
+    @include xx-small-screen{
+        width: 400px;
+        }
+
     @include x-small-screen{
         width: 550px;
         }
 
     @include medium-screen{
-    width: 250px;
+    width: 240px;
+    }
+    
+    @include large-screen{
+        width: 250px; 
+    }
+    @include x-large-screen{
+        width: 320px;
+    }
+    @include xx-large-screen{
+        width: 380px;
     }
 
-    &:hover {
-        width: 300px;
+/*     &:hover {
+        width: 290px;
 
         @include x-small-screen{
             width: 550px;
@@ -176,8 +198,19 @@ body{
         @include medium-screen{
             width: 250px;
     } 
-}
 
+    @include large-screen{
+        width: 250px; 
+      }
+      @include x-large-screen{
+        width: 320px;
+      }
+      @include xx-large-screen{
+        width: 380px;
+      }
+
+}
+ */
     &:hover .menu__box-circle-check{
         animation: slide-left 0.8s ease ;
         transform-origin: right;
@@ -214,7 +247,8 @@ body{
       font-size: 12px;
       margin: 0;
       width: 100%;
-      padding: 0 5px 0 5px;
+      box-sizing: border-box;
+      padding: 0 10px 0 10px;
       white-space: nowrap;
       overflow: hidden;
   }

@@ -146,7 +146,7 @@ body {
 }
 /* MENU */
 .menu {
-  /*     max-width: 1230px; */
+  max-width: 1400px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   position: relative;
@@ -159,7 +159,6 @@ body {
   margin-right: auto;
   margin-bottom: 0;
   width: 100%;
-  display: grid;
 }
 @media (min-width: 992px) {
   .menu {
@@ -171,7 +170,9 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
+  box-sizing: border-box;
   padding-top: 10px;
+  padding-left: 5px;
   width: 93%;
   margin-left: auto;
   margin-right: auto;
@@ -188,6 +189,8 @@ body {
   width: 93%;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
+  padding-left: 10px;
   padding-top: 20px;
   font-size: 15px;
   display: flex;
@@ -209,7 +212,7 @@ body {
   box-shadow: 3px 1px 3px 1px #888888;
   border-radius: 17px;
   cursor: pointer;
-  width: 300px;
+  width: 250px;
   position: relative;
   height: 65px;
   margin-top: 20px;
@@ -220,6 +223,39 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  /*     &:hover {
+          width: 290px;
+
+          @include x-small-screen{
+              width: 550px;
+              }
+
+          @include medium-screen{
+              width: 250px;
+      } 
+
+      @include large-screen{
+          width: 250px; 
+        }
+        @include x-large-screen{
+          width: 320px;
+        }
+        @include xx-large-screen{
+          width: 380px;
+        }
+
+  }
+   */
+}
+@media (min-width: 320px) {
+  .menu__individual-box {
+    width: 300px;
+  }
+}
+@media (min-width: 440px) {
+  .menu__individual-box {
+    width: 400px;
+  }
 }
 @media (min-width: 576px) {
   .menu__individual-box {
@@ -228,20 +264,22 @@ body {
 }
 @media (min-width: 768px) {
   .menu__individual-box {
+    width: 240px;
+  }
+}
+@media (min-width: 992px) {
+  .menu__individual-box {
     width: 250px;
   }
 }
-.menu__individual-box:hover {
-  width: 300px;
-}
-@media (min-width: 576px) {
-  .menu__individual-box:hover {
-    width: 550px;
+@media (min-width: 1200px) {
+  .menu__individual-box {
+    width: 320px;
   }
 }
-@media (min-width: 768px) {
-  .menu__individual-box:hover {
-    width: 250px;
+@media (min-width: 1400px) {
+  .menu__individual-box {
+    width: 380px;
   }
 }
 .menu__individual-box:hover .menu__box-circle-check {
@@ -277,7 +315,8 @@ body {
   font-size: 12px;
   margin: 0;
   width: 100%;
-  padding: 0 5px 0 5px;
+  box-sizing: border-box;
+  padding: 0 10px 0 10px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -459,7 +498,7 @@ body {
     flex-direction: row;
   }
   .footer__item li {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 
