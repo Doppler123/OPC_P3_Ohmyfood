@@ -50,14 +50,13 @@
             }
 
         @include medium-screen{
-
             padding-left: 0;
             width: 100%;
             &__global-container{
                 width: 100%;
                 margin: 0 7.5% 0 7.5%;
                 padding-left: 10px;
-        }
+                }
                 &__logo{
                     font-size: 25px;
                 }
@@ -68,7 +67,31 @@
                 &__item li{
                 font-size: 15px;
                 }
-
+            }
+            
+        @include x-large-screen{
+            &__global-container{
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                }
+                &__logo{
+                    font-size: 25px;
+                    text-align: center;
+                    width: calc(100% - 600px);
+                }
+                &__item{
+                    justify-content: center;
+                    align-items: center;
+                }
+                &__item ul{ 
+                    display: flex;
+                    flex-direction: row;
+                }
+                &__item li{
+                font-size: 15px;
+                margin: 10px 40px 20px 40px;
+                }
             }
         }
     }

@@ -1,6 +1,8 @@
 @charset "UTF-8";
 body {
   margin: 0;
+  height: auto;
+  width: 100%;
 }
 
 a {
@@ -41,18 +43,6 @@ Extra extra large	xxl	≥1400px */
   @mixin x-large-screen{
     @media (max-width: 1400px) { @content; }
   } */
-html {
-  margin: 0;
-  height: auto;
-  width: 100%;
-}
-
-body {
-  margin: 0;
-  height: auto;
-  width: 100%;
-}
-
 .header {
   display: flex;
   flex-direction: row;
@@ -212,7 +202,7 @@ body {
   box-shadow: 3px 1px 3px 1px #888888;
   border-radius: 17px;
   cursor: pointer;
-  width: 250px;
+  width: calc(100% - 50px);
   position: relative;
   height: 65px;
   margin-top: 20px;
@@ -223,64 +213,9 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  /*     &:hover {
-          width: 290px;
-
-          @include x-small-screen{
-              width: 550px;
-              }
-
-          @include medium-screen{
-              width: 250px;
-      } 
-
-      @include large-screen{
-          width: 250px; 
-        }
-        @include x-large-screen{
-          width: 320px;
-        }
-        @include xx-large-screen{
-          width: 380px;
-        }
-
-  }
-   */
 }
-@media (min-width: 320px) {
-  .menu__individual-box {
-    width: 300px;
-  }
-}
-@media (min-width: 440px) {
-  .menu__individual-box {
-    width: 400px;
-  }
-}
-@media (min-width: 576px) {
-  .menu__individual-box {
-    width: 550px;
-  }
-}
-@media (min-width: 768px) {
-  .menu__individual-box {
-    width: 240px;
-  }
-}
-@media (min-width: 992px) {
-  .menu__individual-box {
-    width: 250px;
-  }
-}
-@media (min-width: 1200px) {
-  .menu__individual-box {
-    width: 320px;
-  }
-}
-@media (min-width: 1400px) {
-  .menu__individual-box {
-    width: 380px;
-  }
+.menu__individual-box:hover {
+  width: calc(100% - 50px);
 }
 .menu__individual-box:hover .menu__box-circle-check {
   animation: slide-left 0.8s ease;
@@ -379,7 +314,7 @@ body {
     display: grid;
     grid-template-areas: "entries dishes desserts";
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33% 33% 33%;
     grid-gap: 10px;
   }
   .menu__individual-box {
@@ -503,6 +438,30 @@ body {
   }
   .footer__item li {
     font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer__global-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .footer__logo {
+    font-size: 25px;
+    text-align: center;
+    width: calc(100% - 600px);
+  }
+  .footer__item {
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__item ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__item li {
+    font-size: 15px;
+    margin: 10px 40px 20px 40px;
   }
 }
 
