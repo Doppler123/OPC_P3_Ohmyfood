@@ -80,7 +80,8 @@ h2{
 .steps{
     box-sizing: border-box;
     padding: 15px 20px 25px 20px;
-    margin : 0 7.5% 0 7.5%;
+    max-width: 1400px;
+    margin : auto;
 
     &__title{
         overflow-wrap: break-word;
@@ -125,6 +126,7 @@ h2{
         font-size: 12px;
         position: absolute;
         text-align: center;
+        margin-left: -7px;
     }
 
     &__number p{
@@ -163,7 +165,7 @@ h2{
         @include flex-column();
         justify-content: center;
         align-items: center;
-        padding: 0 0 20px 0;
+        padding: 15px 0 20px 0;
     }
 
     &__four-boxes a{
@@ -176,7 +178,7 @@ h2{
 
     &__title{
         box-sizing: border-box;
-        padding: 30px 0 0 40px;
+        padding: 0 0 0 40px;
     }
 
     @include x-small-screen{

@@ -56,13 +56,13 @@
     max-height: 300px;
     object-fit: cover;
     @include medium-screen{
-        max-height: 460px;        
+        max-height: 320px;        
 }  
 @include large-screen{
-    max-height: 480px;        
+    max-height: 340px;        
 }  
 @include x-large-screen{
-    max-height: 540px;        
+    max-height: 360px;        
 }  
 
 }
@@ -144,7 +144,7 @@
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    animation: opacity 10s forwards;
+    animation: opacity 5s forwards;
     background-color: white;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -228,7 +228,7 @@
 }
 
 &__order-button{   
-margin: 30px 0 30px 0;
+margin: 30px 0 60px 0;
 @include button();
 }
 

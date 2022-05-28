@@ -3,7 +3,7 @@
       background-color: white;
       height: 100%;
       width: 100%;
-      animation: spinner 3s linear ;
+      animation: spinner 2s linear ;
       z-index: 4;
       position: fixed;
       visibility: hidden;
@@ -20,7 +20,7 @@
       opacity: 0.6;
       top: 0;
       left: 0;
-      animation: sk-bounce 2.7s infinite ease-in-out;
+      animation: sk-bounce 1.7s infinite ease-in-out;
     }
     
     .double-bounce1{
