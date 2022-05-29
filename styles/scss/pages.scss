@@ -21,23 +21,36 @@
         cursor: pointer;
         padding-bottom: 5px;
         margin-top: 5px;
-        width: 160px;
+        width: 170px;
         height: auto;
+        @include large-screen{
+            width: 200px;    
+            padding-top: 10px;    
+        }  
+        @include x-large-screen{
+            width: 260px;        
+        }  
         }
-
 
     &__prev-icon{
         position: absolute;
         left: 15px;
+        font-size: 20px;
+        @include large-screen{
+            font-size: 25px;   
+        }  
+        @include x-large-screen{
+            font-size: 30px;       
+        }  
     }
 
     &__prev-icon a{
     color: black;
     }
 
-    &__logo{
+/*     &__logo{
         font-size: 60px; 
-    }
+    } */
     
     &__logo a{
     color: black;

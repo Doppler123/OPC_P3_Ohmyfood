@@ -19,10 +19,8 @@
             color: white;
         }
         &__item{
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; 
-            align-items: flex-start;
+            @include flex-column();
+            @include totally-flex-started();
             list-style-type:none;
             padding-left: 0;
             cursor: pointer;
@@ -61,8 +59,7 @@
                     font-size: 25px;
                 }
                 &__item ul{ 
-                    display: flex;
-                    flex-direction: row;
+                    @include flex-row();
                 }
                 &__item li{
                 font-size: 15px;
@@ -81,12 +78,10 @@
                     width: calc(100% - 600px);
                 }
                 &__item{
-                    justify-content: center;
-                    align-items: center;
+                    @include totally-centered-flex();
                 }
                 &__item ul{ 
-                    display: flex;
-                    flex-direction: row;
+                    @include flex-row();
                 }
                 &__item li{
                 font-size: 15px;

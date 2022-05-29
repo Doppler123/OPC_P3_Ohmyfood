@@ -16,7 +16,6 @@ h2{
 }
 
 .header{
-
     &__logo{
     @include flex-row();
     @include totally-centered-flex();
@@ -27,7 +26,17 @@ h2{
     padding-bottom: 20px;
     margin-top: 20px
     }
-    
+    &__logo img{
+        width: 170px;
+        height: auto;
+        @include large-screen{
+            width: 200px;    
+            padding-top: 10px;    
+        }  
+        @include x-large-screen{
+            width: 260px;        
+        }  
+    }
 }
 
 .localisation{
@@ -42,6 +51,7 @@ h2{
 .localisation i{
     margin-right: 10px;
 }
+
 
 /* EXPLORATION SECTION */
 
@@ -79,12 +89,13 @@ h2{
 
 .steps{
     box-sizing: border-box;
-    padding: 15px 20px 25px 20px;
+    padding: 15px 20px 50px 20px;
     max-width: 1400px;
     margin : auto;
 
     &__title{
         overflow-wrap: break-word;
+        padding: 0 0 0 5px;
     }
 
     &__three-bars{
@@ -157,14 +168,17 @@ h2{
     background-color: #F2F2F2;
     margin-top: 30px;
     width: 100%;
-    padding: 0 0 40px 0;
+    padding: 20px 0 40px 0;
     margin: 0;
     box-sizing: border-box;
 
+    h2{
+        margin: 0;
+    }
+
     &__four-boxes{
         @include flex-column();
-        justify-content: center;
-        align-items: center;
+        @include totally-centered-flex();
         padding: 15px 0 20px 0;
     }
 
@@ -178,7 +192,7 @@ h2{
 
     &__title{
         box-sizing: border-box;
-        padding: 0 0 0 40px;
+        padding: 0 0 0 30px;
     }
 
     @include x-small-screen{
