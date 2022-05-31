@@ -114,7 +114,7 @@ h2{
         @include flex-row();
         justify-content: flex-start;
         align-items: center;
-        width: 97%;
+        width: 95%;
         box-shadow: $standard-box-shadow;
         border-radius: 20px;
         height: 60px;
@@ -124,7 +124,7 @@ h2{
 
     @include medium-screen{
         &__individual-bar{
-            width: 33%;
+            width: 32%;
         }  
     }
 

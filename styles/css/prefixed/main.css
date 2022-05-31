@@ -320,7 +320,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 97%;
+  width: 95%;
   -webkit-box-shadow: 3px 1px 3px 1px #888888;
           box-shadow: 3px 1px 3px 1px #888888;
   border-radius: 20px;
@@ -330,7 +330,7 @@ h2 {
 }
 @media (min-width: 768px) {
   .steps__individual-bar {
-    width: 33%;
+    width: 32%;
   }
 }
 .steps__number {

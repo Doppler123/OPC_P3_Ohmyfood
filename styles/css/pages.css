@@ -224,7 +224,7 @@ Extra extra large	xxl	≥1400px */
   box-shadow: 3px 1px 3px 1px #888888;
   border-radius: 17px;
   cursor: pointer;
-  width: calc(100% - 50px);
+  width: calc(97% - 50px);
   position: relative;
   height: 65px;
   margin-top: 20px;
@@ -236,8 +236,18 @@ Extra extra large	xxl	≥1400px */
   white-space: nowrap;
   overflow: hidden;
 }
+@media (min-width: 768px) {
+  .menu__individual-box {
+    width: calc(100% - 50px);
+  }
+}
 .menu__individual-box:hover {
-  width: calc(100% - 50px);
+  width: calc(97% - 50px);
+}
+@media (min-width: 768px) {
+  .menu__individual-box:hover {
+    width: calc(100% - 50px);
+  }
 }
 .menu__individual-box:hover .menu__box-circle-check {
   animation: slide-left 0.8s ease;
@@ -336,7 +346,7 @@ Extra extra large	xxl	≥1400px */
     display: grid;
     grid-template-areas: "entries dishes desserts";
     grid-template-rows: 1fr;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 32% 32% 32%;
     grid-gap: 10px;
   }
   .menu__individual-box {

@@ -224,7 +224,7 @@ h2 {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  width: 97%;
+  width: 95%;
   box-shadow: 3px 1px 3px 1px #888888;
   border-radius: 20px;
   height: 60px;
@@ -233,7 +233,7 @@ h2 {
 }
 @media (min-width: 768px) {
   .steps__individual-bar {
-    width: 33%;
+    width: 32%;
   }
 }
 .steps__number {
