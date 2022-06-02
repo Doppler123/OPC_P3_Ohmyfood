@@ -1,8 +1,9 @@
 @charset "UTF-8";
 body {
   margin: 0;
-  height: auto;
+  padding: 0;
   width: 100%;
+  height: auto;
 }
 
 a {
@@ -471,8 +472,8 @@ h2 {
   }
   .footer__global-container {
     width: 100%;
-    margin: 0 7.5% 0 7.5%;
-    padding-left: 10px;
+    margin: 0;
+    padding: 20px 0 30px 33px;
   }
   .footer__logo {
     font-size: 25px;
@@ -482,6 +483,14 @@ h2 {
     flex-direction: row;
   }
   .footer__item li {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1400px) {
+  .footer__global-container {
+    padding: 20px 0 30px 100px;
+  }
+  .footer__item li {
     font-size: 15px;
   }
 }
@@ -489,7 +498,6 @@ h2 {
   .footer__global-container {
     width: 100%;
     margin: 0;
-    padding: 0;
   }
   .footer__logo {
     font-size: 25px;
@@ -505,7 +513,6 @@ h2 {
     flex-direction: row;
   }
   .footer__item li {
-    font-size: 15px;
     margin: 10px 40px 20px 40px;
   }
 }

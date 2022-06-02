@@ -52,8 +52,8 @@
             width: 100%;
             &__global-container{
                 width: 100%;
-                margin: 0 7.5% 0 7.5%;
-                padding-left: 10px;
+                margin: 0;
+                padding: 20px 0 30px 33px;
                 }
                 &__logo{
                     font-size: 25px;
@@ -62,7 +62,16 @@
                     @include flex-row();
                 }
                 &__item li{
-                font-size: 15px;
+                font-size: 14px;
+                }
+            }
+
+            @include xx-large-screen{
+                &__global-container{
+                    padding: 20px 0 30px 100px;
+                }
+                &__item li{
+                    font-size: 15px;
                 }
             }
             
@@ -70,7 +79,6 @@
             &__global-container{
                 width: 100%;
                 margin: 0;
-                padding: 0;
                 }
                 &__logo{
                     font-size: 25px;
@@ -84,7 +92,6 @@
                     @include flex-row();
                 }
                 &__item li{
-                font-size: 15px;
                 margin: 10px 40px 20px 40px;
                 }
             }
