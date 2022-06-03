@@ -46,6 +46,17 @@ h2{
     background-color: rgba(223, 215, 215, 0.911);
     padding: 15px 0 15px 0;
     box-shadow: 1px 1px 1px;
+
+    & input{
+        background-color: rgba(223, 215, 215, 0.911);
+        border: none;
+        width:min-content;
+        font-size: 15px;
+        width: 110px;
+        &::placeholder{
+        color: black;
+        }
+    }
 }
 
 .localisation i{
