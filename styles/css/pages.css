@@ -44,6 +44,63 @@ Extra extra large	xxl	≥1400px */
   @mixin x-large-screen{
     @media (max-width: 1400px) { @content; }
   } */
+/* @mixin spinner{
+  .spinner {
+      background-color: white;
+      height: 100%;
+      width: 100%;
+      animation: spinner 2s linear ;
+      z-index: 4;
+      position: fixed;
+      visibility: hidden;
+    }
+
+    .double-bounce1, .double-bounce2{
+      width: 300px;
+      height: 300px;
+      margin: auto;
+      z-index: 5;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: 50%;
+      opacity: 0.6;
+      top: 0;
+      left: 0;
+      animation: sk-bounce 1.7s infinite ease-in-out;
+    }
+
+    .double-bounce1{
+      background-color: $color-primary;
+    }
+
+    .double-bounce2{
+      animation-delay: -1.0s;
+      background-color: $color-secondary;
+    }
+
+
+    @keyframes sk-bounce{
+      0%, 100% { 
+        transform: scale(0.0);
+      } 50% { 
+        transform: scale(1.0);
+      }
+    }
+
+    @keyframes spinner{
+      0% {
+          visibility: visible;
+          opacity: 1;
+      }
+      70% {
+          opacity: 0.6;
+      }
+      100% {
+          opacity: 0.05;
+          visibility: hidden;
+      }
+  }
+  } */
 .header {
   display: flex;
   flex-direction: row;
