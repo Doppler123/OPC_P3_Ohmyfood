@@ -1,4 +1,4 @@
-/* @mixin spinner{
+@mixin spinner{
   .spinner {
       background-color: white;
       height: 100%;
@@ -54,9 +54,9 @@
           visibility: hidden;
       }
   }
-  } */
+  }
 
-@mixin spinner{
+/* @mixin spinner{
   .spinner {
     height: 100%;
     background: white;
@@ -120,4 +120,4 @@
   }
 }
 
-}
+} */
